@@ -2,8 +2,29 @@
 In this tutorial, we will see how to get started with MongoDB Atlas and Vertex AI.
 
 ### Pre-requisites
-1. MongoDB Atlas access
+1. MongoDB Atlas Cluster
 2. Access to Google Cloud Project to deploy and create a Compute Engine instance
+
+### Deploy Atlas Cluster
+* Sign in to https://cloud.mongodb.com
+* Deploy Atlas cluster with the following specifications
+* Cloud Provider: GCP
+* Region: N. Virginia
+* Cluster Tier: M40
+* Storage: 50 GB
+* Version: MongoDB 7.0
+* Cluster Name: vertexai
+
+### Configure Atlas Network Access
+* In the Atlas Console https://cloud.mongodb.com, navigate to Network Access
+* Select __Add IP Address__
+* Add __0.0.0.0/0__ to the Access List Entry
+* This enables access from all IP addresses, for customer data do not use this Access List. It is recommended to use Peering or PrivateEndpoints for customer data.
+
+### Configure Atlas Database Access
+* In the Atlas Console https://cloud.mongodb.com, navigate to Database Access
+* Select __Add New Database User__
+* Input Username, Password and select __Add User__
 
 ### Create Atlas Vector Search Index
 1. Navigate to the Database Deployments page for your project.
