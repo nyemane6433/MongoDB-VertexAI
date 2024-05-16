@@ -57,7 +57,7 @@ Once the VM instance is created, SSH into the VM instance and run the following 
 sudo apt-get update
 sudo apt-get install git
 sudo apt install python3.11-venv
-git clone https://github.com/russ26/MongoDB-VertexAI.git
+git clone https://github.com/nyemane6433/MongoDB-VertexAI.git
 cd MongoDB-VertexAI
 python3 -m venv .venv
 source .venv/bin/activate
