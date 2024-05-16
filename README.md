@@ -47,6 +47,9 @@ We will create a Google Cloud virtual machine instance to run and deploy the app
 * Ensure port 8501 is added to default-allow-http in Network Security > Firewall policies
 * In the Atlas console, add the external IP of the VM to your Atlas project's IP Access List
 
+### Enable Vertex AI API
+* In Google Cloud Console, search for __Vertex AI API__ and enable the API
+
 ### Deploy the application
 The repository contains a script to create and deploy a Streamlit application to transform and store PDFs in MongoDB Atlas, then search them lightning-fast with Atlas Vector Search. The app.py script in the repository uses Python and LangChain to leverage MongoDB Atlas as our data source and Google Vertex AI for generating embeddings.
 
@@ -66,7 +69,7 @@ python3 -m pip install -r requirements.txt
 
 Once the requirements are installed, you can edit the config file by using the command below to add your Atlas cluster connection string: 
 ```
-nano config.py
+vi config.py
 ```
 
 Once saved, you can run the application using the below command. Open the application using the public IP of your VM and the port mentioned in the command output:
